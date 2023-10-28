@@ -1,7 +1,6 @@
-import { NextRequest } from 'next/server'
 import items from '../items'
 
-export async function GET(request: NextRequest, { params }: { params: { ins: string } }) {
-  console.log('2', params.ins)
-  return Response.json(items.filter(item => item.tag.includes('0')))
+export async function GET(request: Request, { params }: { params: { ins: string } }) {
+  const body = JSON.stringify(items.filter(item => item.tag.includes('0')));
+  return new Response(body)
 }
