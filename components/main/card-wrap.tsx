@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 import Link from 'next/link'
 import useSWR from 'swr'
-import fetcher from '../fetcher'
 import Item from '@/interface/Item'
 import Card from './card'
 import CardFilter from './card-filter'
