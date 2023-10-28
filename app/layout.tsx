@@ -1,3 +1,4 @@
+import { Providers } from '@/redux/provider'
 import './css/style.css'
 
 import { Inter } from 'next/font/google'
@@ -40,11 +41,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cabinet.variable} font-inter antialiased bg-white text-gray-800 tracking-tight`}>
-        <div className="flex flex-col min-h-screen overflow-hidden">
-          {children}
-        </div>
-      </body>
+      <Providers>
+        <body className={`${inter.variable} ${cabinet.variable} font-inter antialiased bg-white text-gray-800 tracking-tight`}>
+          <div className="flex flex-col min-h-screen overflow-hidden">
+            {children}
+          </div>
+        </body>
+      </Providers>
     </html>
   )
 }
