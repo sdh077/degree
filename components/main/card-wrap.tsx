@@ -14,7 +14,6 @@ export default function CardWrap({ data }: { data: Item[] }) {
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:pt-32 md:pb-20">
-          {/* Section header */}
           <div className="pb-12 md:pb-14">
             <div className="relative text-center md:text-left">
               <svg className="fill-gray-300  hidden md:block absolute -ml-7 -mt-8" width="22" height="30" xmlns="http://www.w3.org/2000/svg">
@@ -23,13 +22,9 @@ export default function CardWrap({ data }: { data: Item[] }) {
               <h2 className="h2 font-cabinet-grotesk">Latest inspiration</h2>
             </div>
           </div>
-          {/* Content */}
           <div>
-            {/* Category buttons */}
             <CardFilter category={category} setCategory={setCategory} />
-            {/* Gallery */}
             <div className="relative">
-              {/* Images grid */}
               <div className="max-w-sm mx-auto sm:max-w-none grid gap-6 sm:grid-cols-2 md:grid-cols-3 items-start" data-aos-id-inpspiration>
                 {
                   data.map(item => <Card key={item.id} item={item} category={category} />)

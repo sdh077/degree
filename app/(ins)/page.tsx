@@ -1,10 +1,11 @@
 import CardWrap from '@/components/main/card-wrap'
+import data from '@/app/api/items/items'
 export const metadata = {
   title: 'Home - Creative',
   description: 'Page description',
 }
 export default async function Home({ params }) {
-  const data = []
+  // const data = []
   return (
     <>
       {/* <Hero /> */}

@@ -27,7 +27,7 @@ export default function DefaultLayout({
     <>
       <Header />
 
-      <main className="grow">
+      <main className="">
 
         {children}
 
